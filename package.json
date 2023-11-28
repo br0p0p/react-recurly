@@ -2,8 +2,22 @@
   "name": "@recurly/react-recurly",
   "version": "2.0.1",
   "description": "React components for Recurly.js",
+  "files": [
+    "lib",
+    "lib-dist",
+    "types"
+  ],
   "main": "lib-dist/index.js",
   "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./lib/index.js",
+      "module": "./lib/index.js",
+      "default": "./lib-dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/recurly/react-recurly.git"
@@ -54,7 +68,6 @@
   },
   "scripts": {
     "prepublishOnly": "babel lib -d lib-dist",
-    "build": "babel lib -d lib-dist",
-    "postinstall": "babel lib -d lib-dist"
+    "build": "babel lib -d lib-dist"
   }
 }
