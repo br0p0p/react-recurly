@@ -53,6 +53,8 @@
     "storybook": "^7.0.24"
   },
   "scripts": {
-    "prepublishOnly": "babel lib -d lib-dist"
+    "prepublishOnly": "babel lib -d lib-dist",
+    "build": "babel lib -d lib-dist",
+    "postinstall": "babel lib -d lib-dist"
   }
 }
